@@ -16,7 +16,6 @@ import { PostFormComponent } from './post-form/post-form.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent, PostFormComponent,
-    PostComponent,] 
+  bootstrap: [AppComponent] 
 })
 export class AppModule { }
