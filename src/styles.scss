@@ -79,15 +79,38 @@ hr {
 
 .password {
     display: block;
-    height: 130px;
-    width: 60%;
+    height: 150px;
+    width: 70%;
     padding: 0.4rem;
     font-size: 1.2rem;
     border: 2px solid #ccc;
     margin: 1.2rem 0; 
+    border-radius: 10px;
 }
-.password_iteams {
+.password_iteam1 {
     color: #666;
+    width: 50%;
+    height: 30px;
+    border: black solid 1px;
+    opacity: 50%;
+    margin: 5px;
+    background-color: #666;
+    border-radius: 5px;
+}
+.password_iteam2 {
+    color: #666;
+    width: 60%;
+    height: 30px;
+    border: black solid 1px;
+    opacity: 50%;
+    margin: 5px;
+    background-color: #666;
+    border-radius: 5px;
+    
+}
+.password_iteam3 {
+    color: #666;
+    width: 70%;
     height: 30px;
     border: black solid 1px;
     opacity: 50%;
@@ -111,5 +134,15 @@ hr {
 
 .green {
     background-color: green;
+}
+
+.info{
+    display: none ;
+}
+.infoVisible{
+    display: block ;
+    font-size: 28px;
+    color: burlywood;
+    margin: 5px 10px ;
 }
 

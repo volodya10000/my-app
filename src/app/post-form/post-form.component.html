@@ -9,14 +9,15 @@
     <input (input)="changPass()" type="text" class="form-password" placeholder="Password..." [(ngModel)]="text" #inputValue >
     
 
+                                                <!--    Test Task -->
 
-
-   <div  #inputResaul class="password" >                        <!--    Test Task -->
-        <div class="password_iteams" 
+   <div  #inputResaul class="password"  >                     
+        <div #firstResault class="password_iteam1" 
         [ngClass]="changePassResultClass(text,1)">1</div>
-        <div class="password_iteams" 
+        <div #secontResault class="password_iteam2" 
         [ngClass]="changePassResultClass(text,2)">2</div>
-        <div class="password_iteams"
-        [ngClass]="changePassResultClass(text,3)">3</div>   
+        <div #thirtResault class="password_iteam3"
+        [ngClass]="changePassResultClass(text,3)">3</div>
+        <p class="info" #congratulation> </p>
     </div>
 </div>

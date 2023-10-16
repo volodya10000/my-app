@@ -16,11 +16,11 @@ export class AppComponent  {
 constructor(private cdRef: ChangeDetectorRef) {}
 title: string = ""
   posts: any [] = [
-    { title: " Хочу вивчити ангуляр компоненти", text: "Я ще досі хочу вивчити ангуляр компоненти ", id: 0 },
-    { title: " Наступний блок ", text: "Буде про дерективи про пайпи", id: 1 },
+    { title: " Try add your own post", text: "Create topic and write in title   ", id: 0 },
+    { title: " It is very fanny)", text: "welcome | -_- |", id: 1 },
   ]
   
-  
+
   updatePosts(post:any) {
     this.posts.push(post)
     console.log(this.posts)
