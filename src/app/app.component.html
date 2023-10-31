@@ -1,17 +1,42 @@
 <div class="container">
     
-    
+    <p appStyle="red"  fontWeight = "bold"  >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nemo dolor quos obcaecati maxime aperiam doloribus. Ad voluptatum ea odio dolorum provident! Molestiae optio eveniet facilis possimus nesciunt similique ab.
+    Et possimus quibusdam facilis earum voluptatem? Omnis iusto expedita harum, delectus ex enim aliquam commodi autem maiores dolores natus vitae mollitia. Quisquam, fugiat ducimus? Aspernatur facere ab eligendi nulla temporibus?
+    </p>
 
+
+    <!--  Стручктурні директиви -->
+    <button class="btn" (click)="isVisible =!isVisible">Visible</button>
+    <!-- <div *ngIf="isVisible" class="wrap">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque labore, beatae modi hic soluta accusantium adipisci cupiditate iusto omnis enim?
+        </p>
+    </div> -->
+    
+ <div  class="wrap" *appInfo="!isVisible">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque labore, beatae modi hic soluta accusantium adipisci cupiditate iusto omnis enim?
+        </p>
+    </div> 
+
+
+    <h2>Hello World</h2>
     <app-post-form
     (OnAdd)="updatePosts($event)"
     ></app-post-form>
 
     <hr/>
-    <ng-container *ngFor="let p of posts">
-        <app-post 
-            [post]="p">
-        </app-post> 
-    </ng-container>
+
+    <app-post 
+        *ngFor="let p of posts"
+        [post]="p">
+    <div #info>
+        <small *ngIf="p.text.length > 10; else short">Post long</small>
+        <ng-template #short>
+            <small>Post short</small>
+        </ng-template>
+    </div>
+    </app-post> 
+        
+    
  
    
    

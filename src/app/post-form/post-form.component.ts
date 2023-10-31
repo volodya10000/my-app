@@ -11,12 +11,12 @@ import { style } from '@angular/animations';
 })
 export class PostFormComponent implements OnInit{
   @Output() OnAdd = new EventEmitter<any>();
-  @ViewChild("titleinput", { static: true }) inputRef!: ElementRef;     //змінною inputRef! значення по дефолту 0(!)  доступились до елементу ХТМл
+  @ViewChild("titleinput", { static: true }) titleinput!: ElementRef;     //змінною inputRef! значення по дефолту 0(!)  доступились до елементу ХТМл
   
   @ViewChild('firstResault') firstResault!: ElementRef;            //Link for HTML      
   @ViewChild('secontResault') secontResault!: ElementRef;           //Link for HTML 
   @ViewChild('thirtResault') thirtResault!: ElementRef;              //Link for HTML 
-   @ViewChild('congratulation') congratulation!: ElementRef; 
+  @ViewChild('congratulation') congratulation!: ElementRef; 
   title: string = ""
   text: string = ""
     
@@ -97,7 +97,7 @@ addPost() {
   }}   
 
 focusTitle(){
-  this.inputRef.nativeElement.focus()     // nativeElement DOM ELEMENT  with which we can call all the necessary methods
+  this.titleinput.nativeElement.focus()     // nativeElement DOM ELEMENT  with which we can call all the necessary methods
 }
 }
 
